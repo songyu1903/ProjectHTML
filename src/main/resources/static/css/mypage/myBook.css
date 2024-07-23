@@ -1,0 +1,217 @@
+*{
+    box-sizing: inherit;
+}
+
+h1,h3{
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    color: black;
+}
+
+.layout_container{
+    position: relative;
+    transition: opacity .3s;
+}
+.layout{
+    max-width: 1256px;
+    display: block;
+    margin: auto;
+}
+.layout_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*------------------------------sidebar 시작-------------------------------------*/
+.layout_sidebar{
+    height: 100%;
+    display: block;
+}
+.sidebar_content{
+    width: 250px;
+    padding: 26px;
+    top : 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar_header{
+    margin-top: 50px;
+}
+.sidebar_header_account{
+    display: flex;
+}
+.sidebar_header_account_img{
+    margin: 0 25px 0 0;
+}
+.user-img-box{
+    align-content: center;
+    cursor: pointer;
+}
+.user-img{
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.user-img>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.sidebar_header_account_user{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.sidebar_header_account_detail{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.profile{
+    color: #8bb0ff;
+}
+.sidebar_header_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 18px 0 10px;
+}
+.sidebar_user-nav{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar_user-nav_icon{
+    font-size: 24px;
+}
+.sidebar_user-nav_content{
+    font-size: 12px;
+}
+.sidebar_nav-list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.sidebar_nav-list_horizon{
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: 24px 0;
+}
+.sidebar_nav_content{
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 22px;
+}
+.layout_main{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.library{
+    padding: 0 2rem;
+}
+.library_content{
+    max-width: 700px;
+    margin: auto;
+}
+.library_container{
+    position: relative;
+    padding-bottom: 4rem;
+}
+.library_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px 10px;
+    padding: 2rem 0;
+}
+.library_header_user{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.library_header_nickname{
+    font-size: 24px;
+    font-weight: 600;
+    color: #121212;
+    padding-left: 10px;
+}
+.library_divider{
+    height: 1px;
+    flex-shrink: 0;
+    background-color: #e9ecef;
+    width: 100%;
+}
+.library_box{
+    margin-top: 30px;
+}
+.library_box_tabs{
+    display: flex;
+    margin-bottom: 10px;
+}
+.library_box_title{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    padding: 0 12px 3px;
+    border-bottom: 3px solid black;
+    cursor: auto;
+}
+
+.library_tabs_content_holder{
+    flex: auto;
+    min-width: 0;
+    min-height: 0;
+}
+.library_tabs_content{
+    position: relative;
+    width: 100%;
+}
+.library_book-list{
+    margin-bottom: 15px;
+}
+.library_book-list_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 8px;
+}
+.library_book-list_header_title{
+    display: flex;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+.library__book-list__header__info-icon{
+    transition: .2s color ease-out;
+    color: #afafaf;
+}
+.library__book-list__header__info-icon:hover{
+    color: black;
+}

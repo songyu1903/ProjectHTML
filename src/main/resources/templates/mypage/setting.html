@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>북스프레소 - 책향 가득한 공간</title>
+    <link rel="shortcut icon" th:href="@{/img/타이틀아이콘.png}" class="title-img">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/mypage/setting.css}">
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+<!-- 전체 화면 -->
+<div class="layout_container">
+    <div class="layout">
+        <div class="layout_content">
+            <!-- 사이드바 -->
+            <div class="layout_sidebar">
+                <div class="sidebar_content">
+                    <div class="sidebar_header">
+                        <div class="sidebar_header_account">
+                            <div class="sidebar_header_account_img">
+                                <div class="user-img-box">
+                                    <span class="user-img" style="width: 50px; height: 50px; line-height: 50px; font-size: 25px" >
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLhBaehvVPOya-vWYRiyuoQnPgiDZ9OiNkEpabeKMO58a0rVpJo=s96-c">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sidebar_header_account_user">
+                                <div class="sidebar_header_account_detail">
+                                    <span>송유</span>
+                                    <a class="profile" href="/setting">프로필 관리</a>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="sidebar_header_nav">
+                                <a href="" class="nav-link sidebar_user-nav">
+                                    <span class="sidebar_user-nav_icon">
+                                        <svg viewBox="64 64 896 896" focusable="false" data-icon="message" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M924.3 338.4a447.57 447.57 0 00-96.1-143.3 443.09 443.09 0 00-143-96.3A443.91 443.91 0 00512 64h-2c-60.5.3-119 12.3-174.1 35.9a444.08 444.08 0 00-141.7 96.5 445 445 0 00-95 142.8A449.89 449.89 0 0065 514.1c.3 69.4 16.9 138.3 47.9 199.9v152c0 25.4 20.6 46 45.9 46h151.8a447.72 447.72 0 00199.5 48h2.1c59.8 0 117.7-11.6 172.3-34.3A443.2 443.2 0 00827 830.5c41.2-40.9 73.6-88.7 96.3-142 23.5-55.2 35.5-113.9 35.8-174.5.2-60.9-11.6-120-34.8-175.6zM312.4 560c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48 47.9 21.5 47.9 48-21.4 48-47.9 48zm199.6 0c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48 47.9 21.5 47.9 48-21.5 48-47.9 48zm199.6 0c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48 47.9 21.5 47.9 48-21.5 48-47.9 48z"></path></svg>
+                                    </span>
+                                    <span class="sidebar_user-nav_content">내 토론</span>
+                                </a>
+                                <a href="" class="nav-link sidebar_user-nav">
+                                    <span class="sidebar_user-nav_icon">
+                                        <svg viewBox="64 64 896 896" focusable="false" data-icon="profile" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM380 696c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm304 272c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48z"></path></svg>
+                                    </span>
+                                    <span class="sidebar_user-nav_content">내 포스트</span>
+                                </a>
+                                <a href="" class="nav-link sidebar_user-nav">
+                                    <span class="sidebar_user-nav_icon">
+                                        <svg viewBox="64 64 896 896" focusable="false" data-icon="book" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M832 64H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zM668 345.9L621.5 312 572 347.4V124h96v221.9z"></path></svg>
+                                    </span>
+                                    <span class="sidebar_user-nav_content">내 서재</span>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="sidebar_nav-list">
+                          <div class="sidebar_nav-list_horizon"></div>
+                        <a href=""><span class="sidebar_nav_content">홈</span></a>
+                        <a href=""><span class="sidebar_nav_content">포스트</span></a>
+                        <div class="sidebar_nav-list_horizon"></div>
+                        <a href=""><span class="sidebar_nav_content">설정</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 설정 페이지 메인창 -->
+            <main class="layout_main">
+                <div class="settings">
+                    <div class="settings_content">
+                        <div class="settings_container">
+                            <div class="page-title">
+                                <div class="page-title_title">
+                                    <span class="setting-img" style="margin-right: 10px;"><svg viewBox="64 64 896 896" focusable="false" data-icon="setting" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M924.8 625.7l-65.5-56c3.1-19 4.7-38.4 4.7-57.8s-1.6-38.8-4.7-57.8l65.5-56a32.03 32.03 0 009.3-35.2l-.9-2.6a443.74 443.74 0 00-79.7-137.9l-1.8-2.1a32.12 32.12 0 00-35.1-9.5l-81.3 28.9c-30-24.6-63.5-44-99.7-57.6l-15.7-85a32.05 32.05 0 00-25.8-25.7l-2.7-.5c-52.1-9.4-106.9-9.4-159 0l-2.7.5a32.05 32.05 0 00-25.8 25.7l-15.8 85.4a351.86 351.86 0 00-99 57.4l-81.9-29.1a32 32 0 00-35.1 9.5l-1.8 2.1a446.02 446.02 0 00-79.7 137.9l-.9 2.6c-4.5 12.5-.8 26.5 9.3 35.2l66.3 56.6c-3.1 18.8-4.6 38-4.6 57.1 0 19.2 1.5 38.4 4.6 57.1L99 625.5a32.03 32.03 0 00-9.3 35.2l.9 2.6c18.1 50.4 44.9 96.9 79.7 137.9l1.8 2.1a32.12 32.12 0 0035.1 9.5l81.9-29.1c29.8 24.5 63.1 43.9 99 57.4l15.8 85.4a32.05 32.05 0 0025.8 25.7l2.7.5a449.4 449.4 0 00159 0l2.7-.5a32.05 32.05 0 0025.8-25.7l15.7-85a350 350 0 0099.7-57.6l81.3 28.9a32 32 0 0035.1-9.5l1.8-2.1c34.8-41.1 61.6-87.5 79.7-137.9l.9-2.6c4.5-12.3.8-26.3-9.3-35zM788.3 465.9c2.5 15.1 3.8 30.6 3.8 46.1s-1.3 31-3.8 46.1l-6.6 40.1 74.7 63.9a370.03 370.03 0 01-42.6 73.6L721 702.8l-31.4 25.8c-23.9 19.6-50.5 35-79.3 45.8l-38.1 14.3-17.9 97a377.5 377.5 0 01-85 0l-17.9-97.2-37.8-14.5c-28.5-10.8-55-26.2-78.7-45.7l-31.4-25.9-93.4 33.2c-17-22.9-31.2-47.6-42.6-73.6l75.5-64.5-6.5-40c-2.4-14.9-3.7-30.3-3.7-45.5 0-15.3 1.2-30.6 3.7-45.5l6.5-40-75.5-64.5c11.3-26.1 25.6-50.7 42.6-73.6l93.4 33.2 31.4-25.9c23.7-19.5 50.2-34.9 78.7-45.7l37.9-14.3 17.9-97.2c28.1-3.2 56.8-3.2 85 0l17.9 97 38.1 14.3c28.7 10.8 55.4 26.2 79.3 45.8l31.4 25.8 92.8-32.9c17 22.9 31.2 47.6 42.6 73.6L781.8 426l6.5 39.9zM512 326c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm79.2 255.2A111.6 111.6 0 01512 614c-29.9 0-58-11.7-79.2-32.8A111.6 111.6 0 01400 502c0-29.9 11.7-58 32.8-79.2C454 401.6 482.1 390 512 390c29.9 0 58 11.6 79.2 32.8A111.6 111.6 0 01624 502c0 29.9-11.7 58-32.8 79.2z"></path></svg></span>
+                                    <span>설정</span>
+                                </div>
+                            </div>
+                            <div class="setting_user_container">
+                                <div class="setting_user">
+                                    <div class="setting_user_img">
+                                        <div class="user-img-box">
+                                            <span class="user-img" style="width: 50px; height: 50px; line-height: 50px; font-size: 25px">
+                                                <img src="https://lh3.googleusercontent.com/a/ACg8ocLhBaehvVPOya-vWYRiyuoQnPgiDZ9OiNkEpabeKMO58a0rVpJo=s96-c">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="setting_user_info">
+                                        <div class="setting_user_detail">
+                                            <span>송유</span>
+                                            <div>k3s1234@naver.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setting_user_links">
+                                    <a class="profile" href="/myDebate">내 토론</a>
+                                    <a class="profile" href="/myPost">내 포스트</a>
+                                    <a class="profile" href="/myBook">내 서재</a>
+                                </div>
+                            </div>
+                            <div class="settings_body">
+                                <div class="setting_body_content">
+                                    <div class="setting_body_profile">프로필</div>
+                                </div>
+                                <div class="body_content_top">
+                                    <div class="body_tab_content">
+                                        <div class="body_content">
+                                            <div class="body_profile">
+                                                <div class="profile_container">
+                                                    <h1 class="profile_container_title">
+                                                        <span class="profile_title">소개글</span>
+                                                    </h1>
+                                                    <div class="settings_profile_description">안녕하세요</div>
+                                                    <div class="settings_profile_button">
+                                                        <button type="button" class="profile_button">
+                                                            수정
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="profile_container">
+                                                    <h1 class="profile_container_title">
+                                                        <span class="profile_title">회원 설정</span>
+                                                    </h1>
+                                                    <div class="profile_container_item">
+                                                        <span class="profile_container_title">닉네임</span>
+                                                        <div class="profile_container_modify">
+                                                            <span class="profile_nickname">송유</span>
+                                                            <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile_container_item">
+                                                        <span class="profile_container_title">프로필 이미지</span>
+                                                        <div class="profile_container_modify">
+                                                            <span class="profile_img_modify">
+                                                                <div class="user-img-box">
+                                                                     <span class="user-img" style="width: 50px; height: 50px; line-height: 50px; font-size: 25px">
+                                                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLhBaehvVPOya-vWYRiyuoQnPgiDZ9OiNkEpabeKMO58a0rVpJo=s96-c">
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <span>
+                                                                        <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
+                                                                    </span>
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile_container_item">
+                                                        <span class="profile_container_title">프로핑 배경</span>
+                                                        <div class="profile_container_modify">
+                                                            <span>
+                                                                 <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile_container_item">
+                                                        <span class="profile_container_title">이메일</span>
+                                                        <div class="profile_container_modify">
+                                                            <span style="text-align: right">
+                                                                <span style="display: block; color: #adb5bd">k3s1234@naver.com</span>
+                                                                <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="profile_container">
+                                                    <h1 class="profile_container_title">
+                                                        <span class="profile_title">회원 탈퇴</span>
+                                                    </h1>
+                                                    <div class="profile_container_item">
+                                                        <span class="profile_container_title">회원 탈퇴</span>
+                                                        <div class="profile_container_modify">
+                                                            <button style="padding: 0" type="button" class="delete_button"><span>탈퇴</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

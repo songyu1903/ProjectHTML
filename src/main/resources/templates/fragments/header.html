@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header class="header" th:fragment="header">
+    <div class="header-top">
+        <!--로고-->
+        <a href="" class="logo">
+            <img th:src="@{/static/img/타이틀이아콘.png}" alt="">
+            북스프레소
+        </a>
+        <!--        로그인 회원가입 로그아웃 -->
+        <!--        th:if=""-->
+
+        <nav class="nav">
+            <a href="" class="nav-item login">로그인</a>
+            <a href="" class="nav-item signup">회원가입</a>
+        </nav>
+        <!--      th:unless= if 걸어서 로그인하면 로그아웃 나오게-->
+
+<!--        <nav class="nav logout">-->
+<!--            <a href="" class="nav-item logout">로그아웃</a>-->
+<!--        </nav>-->
+    </div>
+<!--    검색 메뉴-->
+    <div class="menu">
+        <ul class="menu-box">
+            <li class="menu-button"><a class="menu-text" href="">토론찾기</a></li>
+            <li class="menu-button"><a class="menu-text" href="">검색</a></li>
+            <li class="menu-button"><a class="menu-text" href="">포스트</a></li>
+            <li class="menu-button"><a class="menu-text" href="">마이페이지</a></li>
+        </ul>
+    </div>
+</header>
+</body>
+</html>

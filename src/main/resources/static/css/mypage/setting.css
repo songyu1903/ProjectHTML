@@ -1,0 +1,312 @@
+*{
+    box-sizing: inherit;
+}
+h1,h3{
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    color: black;
+}
+
+.layout_container{
+    position: relative;
+    transition: opacity .3s;
+}
+.layout{
+    max-width: 1256px;
+    display: block;
+    margin: auto;
+}
+.layout_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*------------------------------sidebar 시작-------------------------------------*/
+.layout_sidebar{
+    height: 100%;
+    display: block;
+}
+.sidebar_content{
+    width: 250px;
+    padding: 26px;
+    top : 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar_header{
+    margin-top: 50px;
+}
+.sidebar_header_account{
+    display: flex;
+}
+.sidebar_header_account_img{
+    margin: 0 25px 0 0;
+}
+.user-img-box{
+    align-content: center;
+    cursor: pointer;
+}
+.user-img{
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.user-img>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.sidebar_header_account_user{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.sidebar_header_account_detail{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.profile{
+    color: #8bb0ff;
+}
+.sidebar_header_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 18px 0 10px;
+}
+.sidebar_user-nav{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar_user-nav_icon{
+    font-size: 24px;
+}
+.sidebar_user-nav_content{
+    font-size: 12px;
+}
+.sidebar_nav-list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.sidebar_nav-list_horizon{
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: 24px 0;
+}
+.sidebar_nav_content{
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 22px;
+}
+/*------------------------------sidebar 끝 -------------------------------------*/
+
+/*------------------------------main 시작-------------------------------------*/
+.layout_main{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.settings{
+    padding: 0 2rem;
+}
+.settings_content{
+    max-width: 700px;
+    margin: auto;
+}
+.settings_container{
+    padding: 3rem 0;
+}
+.setting-img{
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    text-align: center;
+}
+.page-title_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.page-title_title>span, .page-title_title>h1{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 0;
+}
+.setting_user_container{
+    padding : 2rem 0 1rem;
+    height: 135px;
+}
+.setting_user{
+    display: flex;
+}
+.setting_user_img{
+    margin: 0 16px;
+}
+.setting_user_info{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.setting_user_detail{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.setting_user_detail span{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.setting_user_detail div{
+    height: 20px;
+    font-size: 12px;
+    color: #373434;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+.setting_user_links{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 82px;
+}
+.setting_user_links>*{
+   margin-right: 10px;
+}
+.setting_body_content{
+    display: flex;
+    border-bottom: 1px solid antiquewhite;
+    margin-bottom: 10px;
+}
+.setting_body_profile{
+    color: black;;
+    font-weight: 500;
+    border-bottom: 3px solid black;
+    font-size: 16px;
+    padding: 0 12px 3px;
+    cursor: pointer;
+}
+.body_content_top{
+    box-sizing: border-box;
+    color: #000000d9;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    display: flex;
+}
+.body_tab_content{
+    flex: auto;
+    min-height: 0;
+    min-width: 0;
+}
+.body_content{
+    position: relative;
+    width: 100%;
+}
+.profile_container{
+    border: 1px solid #e5eaea;
+    border-radius: 8px;
+    padding: 1rem 1.5rem 2rem;
+    margin-top: 2rem;
+    background-color: #edf5f8;
+}
+.profile_container_title{
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e9ecef;
+}
+.profile_container_title> span{
+    display: block;
+}
+.profile_title{
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+.profile_container>div{
+    margin-top: 2rem;
+}
+.settings_profile_description{
+    color: black;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.settings_profile_button{
+    text-align: center;
+    margin-top: 3rem !important;
+}
+.profile_button{
+    display: inline-block;
+    border: 1px solid #adb5bd;
+    color: black;
+    background-color: white;
+    padding: 6px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile_container_item{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.profile_container_modify{
+    display: flex;
+    align-items: center;
+}
+.profile_nickname{
+    color:gray;
+}
+.profile_img_modify{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color:gray;
+}
+.delete_button{
+    color: #ff4d4f;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+

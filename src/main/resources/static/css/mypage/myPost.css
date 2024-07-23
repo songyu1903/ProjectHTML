@@ -1,0 +1,164 @@
+*{
+    box-sizing: inherit;
+}
+
+h1,h3{
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    color: black;
+}
+
+.layout_container{
+    position: relative;
+    transition: opacity .3s;
+}
+.layout{
+    max-width: 1256px;
+    display: block;
+    margin: auto;
+}
+.layout_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*------------------------------sidebar 시작-------------------------------------*/
+.layout_sidebar{
+    height: 100%;
+    display: block;
+}
+.sidebar_content{
+    width: 250px;
+    padding: 26px;
+    top : 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar_header{
+    margin-top: 50px;
+}
+.sidebar_header_account{
+    display: flex;
+}
+.sidebar_header_account_img{
+    margin: 0 25px 0 0;
+}
+.user-img-box{
+    align-content: center;
+    cursor: pointer;
+}
+.user-img{
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.user-img>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.sidebar_header_account_user{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.sidebar_header_account_detail{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.profile{
+    color: #8bb0ff;
+}
+.sidebar_header_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 18px 0 10px;
+}
+.sidebar_user-nav{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar_user-nav_icon{
+    font-size: 24px;
+}
+.sidebar_user-nav_content{
+    font-size: 12px;
+}
+.sidebar_nav-list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.sidebar_nav-list_horizon{
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: 24px 0;
+}
+.sidebar_nav_content{
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 22px;
+}
+.layout_main{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.post{
+    padding: 0 2rem;
+}
+.post_content{
+    max-width: 700px;
+    margin: auto;
+}
+.post_banner{
+    margin-top: 25px;
+    height: 20rem;
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post_banner_container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post_banner_container span{
+    font-weight: 300;
+    font-size: 25px;
+    background: linear-gradient(to right,white,rgba(255,255,255,.1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

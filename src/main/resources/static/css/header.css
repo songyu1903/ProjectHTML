@@ -1,0 +1,80 @@
+
+/*헤더부분 시작*/
+* {
+    padding: 0;
+    margin: 0;
+    barder: 0;
+    font-family: "Jua", sans-serif;
+    font-style: normal;
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(211, 216, 218);
+    padding-top: 20px;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1256px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-item {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 7px;
+}
+.nav-item:hover{
+    color: #7e6c6c;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    max-width: 1256px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.menu-box {
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+.menu-button {
+    padding: 10px 12px;
+
+}
+
+.menu-text {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-text:hover{
+    color : #7e6c6c;
+}
+/*헤더 부분 끝*/

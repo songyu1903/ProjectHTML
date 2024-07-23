@@ -1,0 +1,236 @@
+*{
+    box-sizing: inherit;
+}
+h1,h3{
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    color: black;
+}
+
+.layout_container{
+    position: relative;
+    transition: opacity .3s;
+}
+.layout{
+    max-width: 1256px;
+    display: block;
+    margin: auto;
+}
+.layout_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*------------------------------sidebar 시작-------------------------------------*/
+.layout_sidebar{
+    height: 100%;
+    display: block;
+}
+.sidebar_content{
+    width: 250px;
+    padding: 26px;
+    top : 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar_header{
+    margin-top: 50px;
+}
+.sidebar_header_account{
+    display: flex;
+}
+.sidebar_header_account_img{
+    margin: 0 25px 0 0;
+}
+.user-img-box{
+    align-content: center;
+    cursor: pointer;
+}
+.user-img{
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.user-img>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.sidebar_header_account_user{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.sidebar_header_account_detail{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.profile{
+    color: #8bb0ff;
+}
+.sidebar_header_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 18px 0 10px;
+}
+.sidebar_user-nav{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar_user-nav_icon{
+    font-size: 24px;
+}
+.sidebar_user-nav_content{
+    font-size: 12px;
+}
+.sidebar_nav-list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.sidebar_nav-list_horizon{
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: 24px 0;
+}
+.sidebar_nav_content{
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 22px;
+}
+.layout_main{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.myDebate{
+    padding: 0 2rem;
+}
+.myDebate_content{
+    max-width: 700px;
+    margin: auto;
+}
+.myDebate_container{
+    padding: 3rem 0;
+}
+.myDebate-img{
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    text-align: center;
+}
+.page-title_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.page-title_title>span, .page-title_title>h1{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 0;
+}
+.myDebate_body_tabs{
+    display: flex;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 15px;
+}
+.myDebate_body_tab{
+    font-size: 16px;
+    color: #adb5bd;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 12px 3px;
+    border-bottom: 3px solid rgba(0,0,0,0);
+    transition: all .2s ease-out;
+    cursor: pointer;
+}
+.myDebate_body_tab:hover{
+    color: black;
+}
+
+.body_content_top{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000000d9;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    display: flex;
+}
+.body_tab_content{
+    flex: auto;
+    min-width: 0;
+    min-height: 0;
+}
+.body_content{
+    position: relative;
+    width: 100%;
+}
+
+.content-empty{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-empty_title{
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+}
+.content-empty_item-primary{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.content-empty_item{
+    text-align: center;
+    font-size: 16px;
+}
+.content-empty_action{
+    width: 10rem;
+    justify-content: center;
+    display: flex;
+    margin: 2rem 0;
+}
+.debate_button{
+    border: 1px solid black;
+    background-color: black;
+    color: #ffd200;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}

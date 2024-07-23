@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>북스프레소 - 책향 가득한 공간</title>
+    <link rel="shortcut icon" th:href="@{/img/타이틀아이콘.png}" class="title-img">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/mypage/myDebate.css}">
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+<!-- 전체 화면 -->
+<div class="layout_container">
+    <div class="layout">
+        <div class="layout_content">
+            <!-- 사이드바 -->
+            <div class="layout_sidebar">
+                <div class="sidebar_content">
+                    <div class="sidebar_header">
+                        <div class="sidebar_header_account">
+                            <div class="sidebar_header_account_img">
+                                <div class="user-img-box">
+                                    <span class="user-img" style="width: 50px; height: 50px; line-height: 50px; font-size: 25px" >
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLhBaehvVPOya-vWYRiyuoQnPgiDZ9OiNkEpabeKMO58a0rVpJo=s96-c">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sidebar_header_account_user">
+                                <div class="sidebar_header_account_detail">
+                                    <span>송유</span>
+                                    <a class="profile" href="/setting">프로필 관리</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar_header_nav">
+                            <a href="" class="nav-link sidebar_user-nav">
+                                    <span class="sidebar_user-nav_icon">
+                                        <svg viewBox="64 64 896 896" focusable="false" data-icon="message" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M924.3 338.4a447.57 447.57 0 00-96.1-143.3 443.09 443.09 0 00-143-96.3A443.91 443.91 0 00512 64h-2c-60.5.3-119 12.3-174.1 35.9a444.08 444.08 0 00-141.7 96.5 445 445 0 00-95 142.8A449.89 449.89 0 0065 514.1c.3 69.4 16.9 138.3 47.9 199.9v152c0 25.4 20.6 46 45.9 46h151.8a447.72 447.72 0 00199.5 48h2.1c59.8 0 117.7-11.6 172.3-34.3A443.2 443.2 0 00827 830.5c41.2-40.9 73.6-88.7 96.3-142 23.5-55.2 35.5-113.9 35.8-174.5.2-60.9-11.6-120-34.8-175.6zM312.4 560c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48 47.9 21.5 47.9 48-21.4 48-47.9 48zm199.6 0c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48 47.9 21.5 47.9 48-21.5 48-47.9 48zm199.6 0c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48 47.9 21.5 47.9 48-21.5 48-47.9 48z"></path></svg>
+                                    </span>
+                                <span class="sidebar_user-nav_content">내 토론</span>
+                            </a>
+                            <a href="" class="nav-link sidebar_user-nav">
+                                    <span class="sidebar_user-nav_icon">
+                                        <svg viewBox="64 64 896 896" focusable="false" data-icon="profile" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM380 696c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm304 272c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48z"></path></svg>
+                                    </span>
+                                <span class="sidebar_user-nav_content">내 포스트</span>
+                            </a>
+                            <a href="" class="nav-link sidebar_user-nav">
+                                    <span class="sidebar_user-nav_icon">
+                                        <svg viewBox="64 64 896 896" focusable="false" data-icon="book" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M832 64H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zM668 345.9L621.5 312 572 347.4V124h96v221.9z"></path></svg>
+                                    </span>
+                                <span class="sidebar_user-nav_content">내 서재</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar_nav-list">
+                        <div class="sidebar_nav-list_horizon"></div>
+                        <a href=""><span class="sidebar_nav_content">홈</span></a>
+                        <a href=""><span class="sidebar_nav_content">포스트</span></a>
+                        <div class="sidebar_nav-list_horizon"></div>
+                        <a href=""><span class="sidebar_nav_content">설정</span></a>
+                    </div>
+                </div>
+            </div>
+            <main class="layout_main">
+                <div class="myDebate">
+                    <div class="myDebate_content">
+                        <div class="myDebate_container">
+                            <div class="page-title">
+                                <div class="page-title_title">
+                                    <span role="img" aria-label="message" class="myDebate-img" style="margin-right: 10px;"><svg viewBox="64 64 896 896" focusable="false" data-icon="message" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M464 512a48 48 0 1096 0 48 48 0 10-96 0zm200 0a48 48 0 1096 0 48 48 0 10-96 0zm-400 0a48 48 0 1096 0 48 48 0 10-96 0zm661.2-173.6c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 00-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 00-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 00112 714v152a46 46 0 0046 46h152.1A449.4 449.4 0 00510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 00142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z"></path></svg></span>
+                                    <span>내 토론</span>
+                                </div>
+                            </div>
+                            <div class="myDebate_body">
+                                <div class="myDebate_body_tabs">
+                                    <div class="myDebate_body_tab">
+                                        진행 중
+                                        (0)
+                                    </div>
+                                    <div class="myDebate_body_tab">
+                                        모집 중(0)
+                                    </div>
+                                    <div class="myDebate_body_tab">
+                                        종료(0)
+                                    </div>
+                                </div>
+                                <div class="body_content_top">
+                                    <div class="body_tab_content">
+                                        <div class="body_content">
+                                            <div style="outline: none">
+                                                <div class="myDebate_body_list">
+                                                    <div class="content-empty">
+                                                        <span class="content-empty_title">
+                                                            <div class="content-empty_item-primary">현재 참여 중인 모임이 없으시네요.</div>
+                                                            <div class="content-empty_item">지금 '모집 중'에서 마음에 드는 모임을 찾아보세요.</div>
+                                                            <div class="content-empty_item">'홈'에도 중간 참여가 가능한 모임들이 많이 있어요.</div>
+                                                        </span>
+                                                        <div class="content-empty_action">
+                                                            <button type="button" class="debate_button">모임 찾아보기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+       </div>
+    </div>
+</div>
+</body>
+</html>
