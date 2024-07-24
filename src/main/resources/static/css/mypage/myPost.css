@@ -16,7 +16,6 @@ a{
 
 .layout_container{
     position: relative;
-    transition: opacity .3s;
 }
 .layout{
     max-width: 1256px;
@@ -34,9 +33,9 @@ a{
     display: block;
 }
 .sidebar_content{
+    background-color: #faf0e3;
     width: 250px;
     padding: 26px;
-    top : 0;
     display: flex;
     flex-direction: column;
 }
@@ -87,7 +86,7 @@ a{
     color: #8bb0ff;
 }
 .sidebar_header_nav{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;

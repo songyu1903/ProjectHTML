@@ -5,6 +5,9 @@ h1,h3{
     margin-bottom: .5em;
     font-weight: 500;
 }
+html{
+    --vh : 120vh;
+}
 
 a{
     text-decoration: none;
@@ -15,7 +18,6 @@ a{
 
 .layout_container{
     position: relative;
-    transition: opacity .3s;
 }
 .layout{
     max-width: 1256px;
@@ -33,6 +35,8 @@ a{
     display: block;
 }
 .sidebar_content{
+    background-color: #faf0e3;
+    height: var(--vh);
     width: 250px;
     padding: 26px;
     top : 0;
@@ -86,7 +90,7 @@ a{
     color: #8bb0ff;
 }
 .sidebar_header_nav{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
@@ -239,7 +243,7 @@ a{
     border-radius: 8px;
     padding: 1rem 1.5rem 2rem;
     margin-top: 2rem;
-    background-color: #edf5f8;
+    background-color: #ffff;
 }
 .profile_container_title{
     font-weight: 500;
