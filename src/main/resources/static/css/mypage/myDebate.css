@@ -7,7 +7,7 @@ h1,h3{
 }
 
 html{
-    --vh : 120vh;
+    --vh : 85vh;
 }
 
 a{
@@ -36,7 +36,7 @@ a{
     display: block;
 }
 .sidebar_content{
-    background-color: #faf0e3;
+    background-color: #fdf8ef;
     height: var(--vh);
     width: 250px;
     padding: 26px;

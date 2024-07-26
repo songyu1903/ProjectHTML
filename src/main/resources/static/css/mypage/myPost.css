@@ -7,6 +7,10 @@ h1,h3{
     font-weight: 500;
 }
 
+html{
+    --vh : 85vh;
+}
+
 a{
     text-decoration: none;
     background-color: transparent;
@@ -33,6 +37,7 @@ a{
     display: block;
 }
 .sidebar_content{
+    height: var(--vh);
     background-color: #faf0e3;
     width: 250px;
     padding: 26px;
