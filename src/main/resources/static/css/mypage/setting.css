@@ -6,7 +6,7 @@ h1,h3{
     font-weight: 500;
 }
 html{
-    --vh : 120vh;
+    --vh : 125vh;
 }
 
 a{
@@ -166,7 +166,7 @@ a{
 }
 .setting_user_container{
     padding : 2rem 0 1rem;
-    height: 135px;
+    height: 100px;
 }
 .setting_user{
     display: flex;

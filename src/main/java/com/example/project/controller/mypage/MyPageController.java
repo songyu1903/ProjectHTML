@@ -10,26 +10,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/myPage")
 public class MyPageController {
-    @GetMapping("setting")
+    @GetMapping("/setting")
     public String setting() {
         return "/mypage/setting";
     }
-    @GetMapping("myDebate")
+    @GetMapping("/myDebate")
     public String myDebate() {
         return "mypage/myDebate";
     }
 
-    @GetMapping("myBook")
+    @GetMapping("/myBook")
     public String myBook(){
         return "mypage/myBook";
     }
-    @GetMapping("myPost")
+    @GetMapping("/myPost")
     public String myPost(){
         return "mypage/myPost";
     }
 
-    @PostMapping("myBook")
-    public String myBookPost(){
-        return "redirect:/mypage/setting";
-    }
 }
