@@ -1,5 +1,6 @@
 *{
     box-sizing: inherit;
+    font-family: "Jua", sans-serif;
 }
 h1,h3{
     margin-bottom: .5em;
@@ -30,107 +31,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
 }
-/*------------------------------sidebar 시작-------------------------------------*/
-.layout_sidebar{
-    height: 100%;
-    display: block;
-}
-.sidebar_content{
-    background-color: #fdf8ef;
-    height: var(--vh);
-    width: 250px;
-    padding: 26px;
-    top : 0;
-    display: flex;
-    flex-direction: column;
-}
-.sidebar_header{
-    margin-top: 50px;
-}
-.sidebar_header_account{
-    display: flex;
-}
-.sidebar_header_account_img{
-    margin: 0 25px 0 0;
-}
-.user-img-box{
-    align-content: center;
-    cursor: pointer;
-}
-.user-img{
-    display: inline-block;
-    overflow: hidden;
-    text-align: center;
-    border-radius: 50%;
-}
 
-.user-img>img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.img{
-    vertical-align: middle;
-    border-style: none;
-}
-
-.sidebar_header_account_user{
-    display: flex;
-    flex: 1;
-    justify-content: center;
-}
-.sidebar_header_account_detail{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.profile{
-    color: #8bb0ff;
-}
-.sidebar_header_nav{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    margin: 18px 0 10px;
-}
-.sidebar_user-nav{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.sidebar_user-nav_icon{
-    font-size: 24px;
-}
-.sidebar_user-nav_content{
-    font-size: 12px;
-}
-.sidebar_nav-list{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.sidebar_nav-list_horizon{
-    display: flex;
-    clear: both;
-    width: 100%;
-    min-width: 100%;
-    margin: 24px 0;
-}
-.sidebar_nav_content{
-    display: flex;
-    align-items: center;
-    padding-left: 16px;
-    width: 100%;
-    height: 44px;
-    font-size: 16px;
-    border-radius: 22px;
-}
 .layout_main{
     flex: 1 1 auto;
     min-width: 0;
@@ -238,4 +139,5 @@ a{
     padding: 10px 25px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 20px;
 }

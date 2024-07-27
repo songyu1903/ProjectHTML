@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Dongle", sans-serif;
 }
 
 .header {
@@ -23,7 +24,7 @@
     margin: 0 auto;
 }
 .header-font{
-    font-size : 20px
+    font-size : 30px
 }
 .logo {
     /*font-size: 40px;*/
@@ -42,7 +43,7 @@
 }
 
 .nav-item {
-    font-size: 20px;
+    font-size: 30px;
     color: #000000;
     text-decoration: none;
     margin-left: 20px;
