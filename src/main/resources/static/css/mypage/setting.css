@@ -108,16 +108,14 @@ a{
 }
 .setting_body_content{
     display: flex;
-    border-bottom: 1px solid antiquewhite;
     margin-bottom: 10px;
 }
 .setting_body_profile{
     color: black;;
     font-weight: 500;
-    border-bottom: 3px solid black;
+    border-bottom: 4px solid black;
     font-size: 16px;
     padding: 0 12px 3px;
-    cursor: pointer;
 }
 .body_content_top{
     box-sizing: border-box;
@@ -178,6 +176,25 @@ a{
     border-radius: 4px;
     cursor: pointer;
 }
+.profile_letter_button{
+    display: inline-block;
+    border: 1px solid #adb5bd;
+    color: black;
+    background-color: white;
+    padding: 6px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile_img_button{
+    display: inline-block;
+    border: 1px solid #adb5bd;
+    color: black;
+    background-color: white;
+    padding: 6px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .profile_container_item{
     display: flex;
     justify-content: space-between;

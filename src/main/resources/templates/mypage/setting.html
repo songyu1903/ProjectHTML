@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/mypage/setting.css}">
+    <script defer th:src="@{/js/mypage/setting.js}"></script>
 </head>
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
@@ -66,7 +67,7 @@
                                                     </h1>
                                                     <div class="settings_profile_description">안녕하세요</div>
                                                     <div class="settings_profile_button">
-                                                        <button type="button" class="profile_button">
+                                                        <button type="button" class="profile_letter_button">
                                                             수정
                                                         </button>
                                                     </div>
@@ -93,9 +94,10 @@
                                                                 </div>
                                                                 <div>
                                                                     <span>
-                                                                        <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
+                                                                        <button onclick="document.getElementById('fileInput').click();" class="profile_img_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
                                                                     </span>
                                                                 </div>
+                                                                <input type="file" accept="image/*" id="fileInput" style="display: none">
                                                             </span>
                                                         </div>
                                                     </div>
