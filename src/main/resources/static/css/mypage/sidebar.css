@@ -3,7 +3,7 @@
     display: block;
 }
 .sidebar_content{
-    background-color: #fdf8ef;
+    background-color: #f7f5f0;
     height: var(--vh);
     width: 250px;
     padding: 26px;
@@ -35,7 +35,6 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 .img{
     vertical-align: middle;

@@ -141,3 +141,26 @@ a{
     cursor: pointer;
     font-size: 18px;
 }
+
+.body_tab{
+    display: none;
+}
+.body_tab.active{
+    display: block;
+}
+.none {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

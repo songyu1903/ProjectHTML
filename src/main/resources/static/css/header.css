@@ -15,7 +15,7 @@
 }
 .header-top {
     display: flex;
-
+    min-width: 900px;
     align-items: center;
     max-width: 1200px;
     padding: 0 24px;
@@ -38,6 +38,7 @@
 .nav {
     display: flex;
     margin-left: auto;
+    max-width: 756px;
 }
 
 .nav-item {
