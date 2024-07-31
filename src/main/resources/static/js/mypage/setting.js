@@ -10,55 +10,36 @@
 // }
 
 // 소개글 수정
-const showEditArea = () => {
-    let description = document.querySelector('.settings_profile_description');
+let originalText = '';
+
+let editMode = (isEditing) => {
+    let descriptionDiv = document.querySelector('.settings_profile_description');
+    let textarea = document.querySelector('.edit_textarea');
     let editButton = document.querySelector('.profile_letter_button');
+    let saveButton = document.querySelector('.button_save');
+    let cancelButton = document.querySelector('.button_cancel');
 
-    // 기존 설명을 textarea로 대체합니다.
-    let textarea = document.createElement('textarea');
-    textarea.classList.add('edit_textarea');
-    textarea.value = description.textContent;
+    if (isEditing) {
+        originalText = descriptionDiv.textContent;
+        textarea.value = originalText;
 
-    // 설명을 감싸고 있는 div를 숨기고 textarea를 추가합니다.
-    description.replaceWith(textarea);
+        descriptionDiv.classList.add('hidden');
+        textarea.classList.remove('hidden');
+    } else {
+        descriptionDiv.textContent = isEditing == false ? originalText : textarea.value;
 
-    // 기존 버튼을 숨기고 저장/취소 버튼을 추가합니다.
-    editButton.classList.add('hidden');
+        descriptionDiv.classList.remove('hidden');
+        textarea.classList.add('hidden');
+    }
 
-    let saveButton = document.createElement('button_save');
-    saveButton.textContent = '저장';
-    saveButton.onclick = () => saveDescription(textarea);
-
-    let cancelButton = document.createElement('button_cancel');
-    cancelButton.textContent = '취소';
-    cancelButton.onclick = () => cancelEdit(textarea, description);
-
-    let buttonContainer = document.createElement('div');
-    buttonContainer.classList.add('button_container');
-    buttonContainer.appendChild(saveButton);
-    buttonContainer.appendChild(cancelButton);
-
-    // 새로운 버튼들을 DOM에 추가합니다.
-    editButton.parentElement.appendChild(buttonContainer);
+    editButton.classList.toggle('hidden', isEditing);
+    saveButton.classList.toggle('hidden', !isEditing);
+    cancelButton.classList.toggle('hidden', !isEditing);
 };
 
-let saveDescription = (textarea) => {
-    let description = document.createElement('div');
-    description.classList.add('settings_profile_description');
-    description.textContent = textarea.value;
-
-    textarea.replaceWith(description);
-    document.querySelector('.button_container').remove();
-    document.querySelector('.profile_letter_button').classList.remove('hidden');
-};
-
-let cancelEdit = (textarea, originalDescription) => {
-    textarea.replaceWith(originalDescription);
-    document.querySelector('.button_container').remove();
-    document.querySelector('.profile_letter_button').classList.remove('hidden');
-};
-
-
+let showEditArea = () => editMode(true);
+let saveDescription = () => editMode(null);
+let cancelEdit = () => editMode(false);
 
 {
     // 이미지 삽입
@@ -79,4 +60,46 @@ let cancelEdit = (textarea, originalDescription) => {
             imgTag.setAttribute('src', src);
         })
     });
+}
+
+{
+// 모달 관련 요소 가져오기
+let modal = document.querySelector(".modal")
+let btn = document.querySelector(".profile_nickname_button")
+let span = document.getElementsByClassName("close")[0];
+let confirmBtn = document.getElementById("confirmBtn");
+let nicknameInput = document.querySelector(".nickname-input")
+let changeNickname = document.querySelectorAll(".profile_nickname")
+
+// 닉네임 변경 버튼을 클릭하면 모달을 엶
+btn.onclick = function() {
+    modal.classList.add("show");
+    modal.style.display = "block";
+    nicknameInput.value = changeNickname[0].textContent
+}
+
+// 닫기 버튼(X)을 클릭하면 모달을 닫음
+span.onclick = function() {
+    modal.classList.remove("show");
+
+}
+
+// 확인 버튼을 클릭하면 모달을 닫음
+confirmBtn.onclick = function() {
+    // 필요한 경우 추가 로직을 여기에 추가할 수 있음
+    modal.classList.remove("show");
+    changeNickname.forEach(ch => ch.textContent = nicknameInput.value);
+
+}
+
+// 모달 외부를 클릭하면 모달을 닫음
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    modal.classList.remove("show");
+
+}
+
+
 }

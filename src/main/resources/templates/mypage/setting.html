@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="setting_user_info">
                                         <div class="setting_user_detail">
-                                            <span>송호</span>
+                                            <span class="profile_nickname">송호</span>
                                             <div>k3s1234@naver.com</div>
                                         </div>
                                     </div>
@@ -66,10 +66,13 @@
                                                         <span class="profile_title">소개글</span>
                                                     </h1>
                                                     <div class="settings_profile_description">안녕하세요</div>
+                                                        <textarea class="edit_textarea hidden"></textarea>
                                                     <div class="settings_profile_button">
                                                         <button type="button" class="profile_letter_button" onclick="showEditArea()">
                                                             수정
                                                         </button>
+                                                        <button type="button" class="button_save hidden" onclick="saveDescription()">저장</button>
+                                                        <button type="button" class="button_cancel hidden" onclick="cancelEdit()">취소</button>
                                                     </div>
                                                 </div>
                                                 <div class="profile_container">
@@ -80,7 +83,7 @@
                                                         <span class="profile_container_title">닉네임</span>
                                                         <div class="profile_container_modify">
                                                             <span class="profile_nickname">송호</span>
-                                                            <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
+                                                            <button class="profile_nickname_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
                                                         </div>
                                                     </div>
                                                     <div class="profile_container_item">
@@ -137,10 +140,20 @@
                             </div>
                         </div>
                     </div>
-
-                </main>
-            </div>
+                </div>
+            </main>
         </div>
     </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content" >
+        <span class="close">&times;</span>
+        <div class="nickname">닉네임 변경</div>
+            <input type="text" class="nickname-input" id="nickname" name="nickname">
+        <button id="confirmBtn">확인</button>
+    </div>
+</div>
+
 </body>
 </html>
