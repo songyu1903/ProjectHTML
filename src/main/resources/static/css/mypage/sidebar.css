@@ -97,3 +97,10 @@
     font-size: 16px;
     border-radius: 22px;
 }
+.profile_nickname{
+    color: black;
+
+}
+.user-img-box{
+    display: flex;
+}

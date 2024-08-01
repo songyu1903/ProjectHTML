@@ -11,7 +11,6 @@
 
 // 소개글 수정
 let originalText = '';
-
 let editMode = (isEditing) => {
     let descriptionDiv = document.querySelector('.settings_profile_description');
     let textarea = document.querySelector('.edit_textarea');
@@ -41,6 +40,7 @@ let showEditArea = () => editMode(true);
 let saveDescription = () => editMode(null);
 let cancelEdit = () => editMode(false);
 
+
 {
     // 이미지 삽입
     let $fileInput = document.querySelector('#fileInput')
@@ -63,43 +63,125 @@ let cancelEdit = () => editMode(false);
 }
 
 {
-// 모달 관련 요소 가져오기
-let modal = document.querySelector(".modal")
-let btn = document.querySelector(".profile_nickname_button")
-let span = document.getElementsByClassName("close")[0];
-let confirmBtn = document.getElementById("confirmBtn");
-let nicknameInput = document.querySelector(".nickname-input")
-let changeNickname = document.querySelectorAll(".profile_nickname")
+
+// 닉네임 모달 관련 요소 가져오기
+    let n_modal = document.querySelector(".modal-nickname");
+    let btn = document.querySelector(".profile_nickname_button");
+    let span = document.getElementsByClassName("nickname_close")[0];
+    let confirmBtn = document.getElementById("nickname_confirmBtn");
+    let nicknameInput = document.querySelector(".nickname-input");
+    let changeNickname = document.querySelectorAll(".profile_nickname");
 
 // 닉네임 변경 버튼을 클릭하면 모달을 엶
-btn.onclick = function() {
-    modal.classList.add("show");
-    modal.style.display = "block";
-    nicknameInput.value = changeNickname[0].textContent
-}
+    btn.onclick = function () {
+        n_modal.style.display = "block";
+        nicknameInput.value = changeNickname[0].textContent;
+    };
 
 // 닫기 버튼(X)을 클릭하면 모달을 닫음
-span.onclick = function() {
-    modal.classList.remove("show");
-
-}
+    span.onclick = function () {
+        n_modal.style.display = "none";
+    };
 
 // 확인 버튼을 클릭하면 모달을 닫음
-confirmBtn.onclick = function() {
-    // 필요한 경우 추가 로직을 여기에 추가할 수 있음
-    modal.classList.remove("show");
-    changeNickname.forEach(ch => ch.textContent = nicknameInput.value);
-
-}
+    confirmBtn.onclick = function () {
+        changeNickname.forEach(ch => ch.textContent = nicknameInput.value);
+        n_modal.style.display = "none";
+    };
 
 // 모달 외부를 클릭하면 모달을 닫음
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    modal.classList.remove("show");
-
+    document.body.onclick = function (event) {
+        console.log('click@@@')
+        if (event.target == n_modal) {
+            n_modal.style.display = "none";
+        }
+    };
 }
 
 
+{
+// 이메일 모달 관련 요소 가져오기
+    let e_modal = document.querySelector(".modal-email");
+    let e_btn = document.querySelector(".profile_email_button");
+    let e_span = document.getElementsByClassName("email_close")[0];
+    let e_confirmBtn = document.getElementById("email_confirmBtn");
+    let emailInput = document.querySelector(".email-input");
+    let changeEmail = document.querySelectorAll(".profile_email");
+
+// 이메일 변경 버튼을 클릭하면 모달을 엶
+    e_btn.onclick = function () {
+        e_modal.style.display = "block";
+        emailInput.value = changeEmail[0].textContent;
+    };
+
+// 닫기 버튼(X)을 클릭하면 모달을 닫음
+    e_span.onclick = function () {
+        e_modal.style.display = "none";
+    };
+
+// 확인 버튼을 클릭하면 모달을 닫음
+    e_confirmBtn.onclick = function () {
+        changeEmail.forEach(ch => ch.textContent = emailInput.value);
+        e_modal.style.display = "none";
+    };
+
+// 모달 외부를 클릭하면 모달을 닫음
+    document.onclick = function (event) {
+        if (event.target == e_modal) {
+            e_modal.style.display = "none";
+        }
+    };
 }
+
+{
+
+// 탈퇴 모달 관련 요소 가져오기
+    let d_btn = document.querySelector(".delete_button");
+    let d_span = document.getElementsByClassName("delete_close")[0];
+    let d_modal = document.querySelector(".modal-delete");
+
+// 탈퇴 버튼을 클릭하면 모달을 엶
+    d_btn.onclick = function () {
+        d_modal.style.display = "block";
+    };
+
+// 닫기 버튼(X)을 클릭하면 모달을 닫음
+    d_span.onclick = function () {
+        d_modal.style.display = "none";
+    };
+
+// 모달 외부를 클릭하면 모달을 닫음
+    window.onclick = function (event) {
+        if (event.target == d_modal) {
+            d_modal.style.display = "none";
+        }
+    };
+
+// 탈퇴 체크박스 및 버튼 관련 로직
+    document.getElementById('agreeCheckBox').addEventListener('change', function () {
+        let leaveBtn = document.getElementById('deleteBtn');
+        if (this.checked) {
+            leaveBtn.classList.add('highlighted');
+        } else {
+            leaveBtn.classList.remove('highlighted');
+        }
+    });
+
+    document.getElementById('deleteBtn').addEventListener('click', function () {
+        let agreeCheckbox = document.getElementById('agreeCheckBox');
+        let errorMessage = document.getElementById('error-message');
+
+        if (!agreeCheckbox.checked) {
+            errorMessage.style.display = 'block';
+        } else {
+            errorMessage.style.display = 'none';
+            alert('탈퇴가 완료되었습니다.');
+            // Here you can add the logic to handle the withdrawal process
+        }
+    });
+
+    document.getElementById('cancelBtn').addEventListener('click', function () {
+        alert('탈퇴가 취소되었습니다.');
+    });
+}
+
