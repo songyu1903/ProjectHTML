@@ -102,5 +102,6 @@
 
 }
 .user-img-box{
+    margin-bottom: 10px;
     display: flex;
 }

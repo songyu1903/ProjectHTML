@@ -141,8 +141,64 @@ a{
 .post_body_list{
     padding: 20px 1rem 0;
 }
-
-
+.post_note{
+    width: 100%;
+    height: 14.5rem;
+    display: flex;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.post_note_info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.post_note_header{
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post_note_header_title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+    overflow: hidden;
+}
+.post_note_body .post_note_body_container{
+    flex: 1;
+    display: flex;
+}
+.post_note_body_info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.post_description{
+    height: 65.1px;
+    color: #939393;
+    line-height: 155%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.post_note_footer{
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.post_topic{
+    width: 7.6rem;
+}
+.post_topic_book{
+    overflow: hidden;
+    border-radius: 4px;
+    margin-left: auto;
+    display: flex;
+    justify-content: end;
+    height: 9.2rem;
+}
 
 .post_content_empty{
     height: 30rem;

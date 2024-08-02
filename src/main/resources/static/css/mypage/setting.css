@@ -505,6 +505,20 @@ label{
     border-radius: 4px;
     cursor: pointer;
 }
+#deleteBtn{
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+    padding: 6px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.error-message{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+}
 
 .reason label,
 .confirm label{

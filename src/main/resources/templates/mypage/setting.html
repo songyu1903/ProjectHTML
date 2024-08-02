@@ -105,14 +105,6 @@
                                                         </div>
                                                     </div>
                                                     <div class="profile_container_item">
-                                                        <span class="profile_container_title">프로핑 배경</span>
-                                                        <div class="profile_container_modify">
-                                                            <span>
-                                                                 <button class="profile_button" style="padding: 2px 12px; margin-left: 10px">변경</button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="profile_container_item">
                                                         <span class="profile_container_title">이메일</span>
                                                         <div class="profile_container_modify">
                                                             <span style="text-align: right">
@@ -145,7 +137,6 @@
         </div>
     </div>
 </div>
-
 <div id="modal-nickname" class="modal-nickname">
     <div class="modal-content" >
         <span class="nickname_close">&times;</span>
@@ -178,13 +169,13 @@
             <label><input style="margin-right: 10px" type="checkbox">서비스 및 고객지원이 불만족스러워서</label>
             <label><input style="margin-right: 10px" type="checkbox">같이 토론하는 사람이 마음에 안들어서</label>
         </div>
-        <p>북스프레소에 하고 싶은 이야기가 있으신가요?</p>
+        <p style="margin-bottom: 10px">북스프레소에 하고 싶은 이야기가 있으신가요?</p>
         <textarea class="delete_textarea" placeholder="탈퇴하게 된 자세한 이유나 북스프레소의 발전을 위해 알려주실 내용이 있다면 알려주세요."></textarea>
         <div class="confirm">
             <label><input type="checkbox" id="agreeCheckBox">
                 회원 탈퇴 안내를 모두 확인하였으며 탈퇴에 동의합니다.(필수)
             </label>
-            <span id="error-message" class="error-message">탈퇴를 원하시면 탈퇴동의에 체크해야 합니다.</span>
+            <span style="display: none" id="error-message" class="error-message">탈퇴를 원하시면 탈퇴동의에 체크해야 합니다.</span>
         </div>
         <button id="cancelBtn">취소</button>
         <button id="deleteBtn">탈퇴</button>

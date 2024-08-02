@@ -158,30 +158,26 @@ let cancelEdit = () => editMode(false);
     };
 
 // 탈퇴 체크박스 및 버튼 관련 로직
-    document.getElementById('agreeCheckBox').addEventListener('change', function () {
-        let leaveBtn = document.getElementById('deleteBtn');
-        if (this.checked) {
-            leaveBtn.classList.add('highlighted');
-        } else {
-            leaveBtn.classList.remove('highlighted');
-        }
-    });
-
     document.getElementById('deleteBtn').addEventListener('click', function () {
         let agreeCheckbox = document.getElementById('agreeCheckBox');
-        let errorMessage = document.getElementById('error-message');
+        let erorrMeg = document.getElementById('error-message')
+        let deleteBtn = document.getElementById('deleteBtn')
 
         if (!agreeCheckbox.checked) {
-            errorMessage.style.display = 'block';
+            deleteBtn.addEventListener("click", function (){
+                erorrMeg.style.display = "block"
+            })
         } else {
-            errorMessage.style.display = 'none';
+            agreeCheckbox.addEventListener("click", function (){
+                erorrMeg.style.display = "none"
+            })
             alert('탈퇴가 완료되었습니다.');
-            // Here you can add the logic to handle the withdrawal process
         }
     });
 
+    //  취소 버튼 누르면 모달창 닫음
     document.getElementById('cancelBtn').addEventListener('click', function () {
-        alert('탈퇴가 취소되었습니다.');
+        d_modal.style.display = "none"
     });
 }
 
